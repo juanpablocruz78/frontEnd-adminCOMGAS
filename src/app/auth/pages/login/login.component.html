@@ -1,0 +1,26 @@
+<div id="contenedor">
+    <div id="central">
+        <div id="login">
+            <div class="titulo">
+                COMGAS
+            </div>
+            <form autocomplete="off" class="example-form" [formGroup]="loginForm" (ngSubmit)="login($event)">
+              <mat-label class="subtitulo">Usuario</mat-label>
+                <input placeholder="" formControlName="username" matInput type="username">
+              
+                
+              <mat-label class="subtitulo">Contraseña</mat-label>
+                <input placeholder="" formControlName="password" matInput type="password">
+                
+                <button mat-raised-button type="submit" title="Ingresar" name="Ingresar" [disabled]="loginForm.invalid">Ingresar</button>
+            </form>
+            <div class="pie-form">
+                <a href="#">¿Perdiste tu contraseña?</a>
+                <a href="#">¿No tienes Cuenta? Registrate</a>
+            </div>
+        </div>
+        <div class="inferior">
+            <a href="#">Volver</a>
+        </div>
+    </div>
+</div>
